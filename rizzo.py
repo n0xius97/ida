@@ -25,6 +25,8 @@
 #
 # Craig Heffner
 # @devttys0
+# 
+# updated by n0xius for IDA 7.0
 ##########################################################################
 import idc
 import idaapi
