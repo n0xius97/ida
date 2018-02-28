@@ -501,8 +501,6 @@ class RizzoPlugin(idaapi.plugin_t):
     NAME = "rizzo.py"
 
     def init(self):
-#        self.menu_context_load = idaapi.add_menu_item("File/Load file/", "Rizzo signature file...", "", 0, self.rizzo_load, (None,))
-#        self.menu_context_produce = idaapi.add_menu_item("File/Produce file/", "Rizzo signature file...", "", 0, self.rizzo_produce, (True,))
         # Register the action
         self.menu_context_load = idaapi.action_desc_t(
             'my:load_rizzo',  # The action name. This acts like an ID and must be unique
@@ -537,8 +535,6 @@ class RizzoPlugin(idaapi.plugin_t):
         return idaapi.PLUGIN_KEEP
 
     def term(self):
-        idaapi.detach_action_from_menu(self.menu_context_load)
-        idaapi.detach_action_from_menu(self.menu_context_produce)
         return None
 
     def run(self, arg):
